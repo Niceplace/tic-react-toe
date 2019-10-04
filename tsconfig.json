@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": ["es2017", "dom"],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "noUnusedLocals": true,
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"]
+}

@@ -15,7 +15,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
+cov
 
 # nyc test coverage
 .nyc_output
@@ -59,3 +59,16 @@ typings/
 
 # next.js build output
 .next
+
+
+# Created by https://www.gitignore.io/api/code
+# Edit at https://www.gitignore.io/?templates=code
+
+### Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# End of https://www.gitignore.io/api/code

@@ -1,0 +1,76 @@
+{
+  "name": "simon",
+  "version": "0.0.1",
+  "description": "Pleo test engineer challenge (heracles)",
+  "main": "index.ts",
+  "repository": "https://github.com/Niceplace/pleo-heracles-challenge",
+  "author": "s.beaulie2@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "test:unit": "mocha test/unit/**/*.spec.ts",
+    "test:unit:watch": "yarn test:unit --watch",
+    "test:unit:cover": "nyc yarn test:unit",
+    "test:acceptance": "mocha test/acceptance/**/*.spec.ts",
+    "test:unit:acceptance": "yarn test:acceptance --watch",
+    "dev": "ts-node index.ts",
+    "reformat": "prettier --write './**/*.{ts,json,js}'",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "check-ts": "tsc -p . --noEmit",
+    "lint": "tslint --exclude './**/node_modules/**/*.ts' './**/*.ts'",
+    "start": "ts-node app.ts"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn ts-check"
+    }
+  },
+  "nyc": {
+    "include": [
+      "app"
+    ],
+    "extension": [
+      "ts"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "all": true,
+    "report-dir": "./cov"
+  },
+  "dependencies": {
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/chai-as-promised": "^7.1.2",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.1",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0"
+  }
+}
