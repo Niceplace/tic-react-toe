@@ -11,12 +11,12 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "test:unit": "mocha test/unit/**/*.spec.ts",
+    "test:unit": "mocha test/unit",
     "test:unit:watch": "yarn test:unit --watch",
     "test:unit:cover": "nyc yarn test:unit",
-    "test:acceptance": "mocha test/acceptance/**/*.spec.ts",
-    "test:unit:acceptance": "yarn test:acceptance --watch",
-    "dev": "ts-node index.ts",
+    "test:acceptance": "mocha test/acceptance",
+    "test:acceptance:watch": "yarn run test:acceptance --watch",
+    "dev": "ts-node-dev --respawn index.ts",
     "reformat": "prettier --write './**/*.{ts,json,js}'",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "check-ts": "tsc -p . --noEmit",
@@ -36,8 +36,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn ts-check"
+      "pre-commit": "lint-staged && npm run test:unit",
+      "pre-push": "yarn check-ts && npm run test:acceptance"
     }
   },
   "nyc": {
@@ -69,6 +69,7 @@
     "mocha": "^6.2.1",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
+    "ts-node-dev": "^1.0.0-pre.43",
     "tslint": "^5.20.0",
     "tslint-config-airbnb": "^5.11.2",
     "tslint-config-prettier": "^1.18.0"
