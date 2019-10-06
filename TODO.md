@@ -29,9 +29,9 @@ Bonus:
 
 # Features
 
-- Multiple of 1000 have to be grouped in series of three digits
-- Round to two decimals
-- Separator is '.' or nothing (Integer)
+- Multiple of 1000 have to be grouped in series of three digits (done)
+- Round to two decimals (done)
+- Separator is '.' or nothing (Integer) (done)
 
 - Start off with basic logic for validation & formatting
 - Write unit tests for the methods needed to transform from number to string
