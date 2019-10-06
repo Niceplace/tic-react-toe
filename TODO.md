@@ -31,9 +31,9 @@ Bonus:
 
 - Multiple of 1000 have to be grouped in series of three digits
 - Round to two decimals
-- Separator is '.'
+- Separator is '.' or nothing (Integer)
 
-- Start off with basic logic for formatting
+- Start off with basic logic for validation & formatting
 - Write unit tests for the methods needed to transform from number to string
 
 - Spin up a simple web server

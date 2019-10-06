@@ -55,6 +55,8 @@
     "report-dir": "./cov"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.141",
+    "lodash": "^4.17.15",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
   },
