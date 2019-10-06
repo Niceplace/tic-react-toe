@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { splitInChunks } from '../../app/numberSplitter';
+import { splitInChunks } from '../../app/splitter';
 
 describe('Number splitter', () => {
   it('Should throw when chunk max size < 1', () => {
