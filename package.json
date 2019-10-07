@@ -11,17 +11,16 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "test:unit": "mocha test/unit",
+    "test:unit": "mocha --opts src/test/mocha.opts src/test/unit/**/*.spec.ts",
     "test:unit:watch": "yarn test:unit --watch",
-    "test:unit:cover": "nyc yarn test:unit",
-    "test:acceptance": "mocha test/acceptance",
+    "test:unit:cover": "nyc npm run test:unit",
+    "test:acceptance": "mocha --opts src/test/mocha.opts src/test/acceptance/**/*.spec.ts",
     "test:acceptance:watch": "yarn run test:acceptance --watch",
-    "dev": "ts-node-dev --respawn index.ts",
-    "reformat": "prettier --write './**/*.{ts,json,js}'",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "check-ts": "tsc -p . --noEmit",
     "lint": "tslint --exclude './**/node_modules/**/*.ts' './**/*.ts'",
-    "start": "ts-node app.ts"
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "dev": "ts-node-dev --respawn index.ts",
+    "start": "ts-node index.ts"
   },
   "lint-staged": {
     "*.ts": [
@@ -40,20 +39,6 @@
       "pre-push": "yarn check-ts && npm run test:acceptance"
     }
   },
-  "nyc": {
-    "include": [
-      "app"
-    ],
-    "extension": [
-      "ts"
-    ],
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "all": true,
-    "report-dir": "./cov"
-  },
   "dependencies": {
     "@types/lodash": "^4.14.141",
     "lodash": "^4.17.15",
@@ -61,9 +46,11 @@
     "typescript": "^3.6.3"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^0.1.3",
     "@types/chai": "^4.2.3",
     "@types/chai-as-promised": "^7.1.2",
     "@types/mocha": "^5.2.7",
+    "@types/proxyquire": "^1.3.28",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "husky": "^3.0.8",
@@ -71,6 +58,7 @@
     "mocha": "^6.2.1",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
+    "proxyquire": "^2.1.3",
     "ts-node-dev": "^1.0.0-pre.43",
     "tslint": "^5.20.0",
     "tslint-config-airbnb": "^5.11.2",

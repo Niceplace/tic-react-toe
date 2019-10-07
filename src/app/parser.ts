@@ -3,7 +3,7 @@ import { round } from 'lodash';
 /**
  * For a given input, return a boolean indicating if it's valid number (true) or not (false)
  */
-const isValidNumber = (input: string) => !(Number(input) === Number.NaN);
+const isValidNumber = (input: string) => !Number.isNaN(Number(input));
 
 /**
  * Round number to a given # of decimals
@@ -13,7 +13,7 @@ const isValidNumber = (input: string) => !(Number(input) === Number.NaN);
 const roundAmount = (amount: number, numDecimals = 2) =>
   round(amount, numDecimals);
 
-const parseToNumber = (input: any) => {
+const parseToNumber = (input: string) => {
   if (!isValidNumber(input)) {
     throw new Error(
       'Invalid input specified, expecting integer or floating point number',
