@@ -13,7 +13,7 @@ const isValidNumber = (input: string) => !Number.isNaN(Number(input));
 const roundAmount = (amount: number, numDecimals = 2) =>
   round(amount, numDecimals);
 
-const parseToNumber = (input: string) => {
+const parseNumber = (input: string) => {
   if (!isValidNumber(input)) {
     throw new Error(
       'Invalid input specified, expecting integer or floating point number',
@@ -22,4 +22,4 @@ const parseToNumber = (input: string) => {
   return roundAmount(Number(input));
 };
 
-export { parseToNumber };
+export { parseNumber };
