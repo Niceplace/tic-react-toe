@@ -1,10 +1,11 @@
-import { parseNumber } from './app/parser';
-import { formatNumber } from './app/formatter';
+import express from 'express';
+import { formatRoute } from './routes/format';
 
-(async () => {
-  const input = process.env.INPUT_TOFORMAT || '1234.567';
+const app = express();
+const port = 3000;
 
-  const parsedInput = parseNumber(input);
-  const formatted = formatNumber(parsedInput);
-  console.log('The money amount is %s', formatted);
-})();
+app.get('/format/money/:input', formatRoute);
+
+app.listen(port, () =>
+  console.log(`Pleo money formatter listening on port ${port}!`),
+);
