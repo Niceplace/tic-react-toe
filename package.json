@@ -13,7 +13,7 @@
   "scripts": {
     "test:unit": "mocha --opts src/test/mocha.opts src/test/unit/**/*.spec.ts",
     "test:unit:watch": "yarn test:unit --watch",
-    "test:unit:cover": "nyc npm run test:unit",
+    "test:unit:cover": "nyc --silent npm run test:unit && nyc report",
     "test:acceptance": "mocha --opts src/test/mocha.opts src/test/acceptance/**/*.spec.ts",
     "test:acceptance:watch": "yarn run test:acceptance --watch",
     "check-ts": "tsc -p . --noEmit",
