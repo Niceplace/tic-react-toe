@@ -14,7 +14,7 @@ describe('Currency converter (via express)', () => {
     const input = '1';
     const expected = '1.00';
 
-    return request(server)
+    return supertest(server)
       .get(`/format/money/${input}`)
       .expect(200, expected);
   });
@@ -23,7 +23,7 @@ describe('Currency converter (via express)', () => {
     const input = '123.456';
     const expected = '123.46';
 
-    return request(server)
+    return supertest(server)
       .get(`/format/money/${input}`)
       .expect(200, expected);
   });
@@ -32,7 +32,7 @@ describe('Currency converter (via express)', () => {
     const input = '-1';
     const expected = '-1.00';
 
-    return request(server)
+    return supertest(server)
       .get(`/format/money/${input}`)
       .expect(200, expected);
   });
@@ -41,7 +41,7 @@ describe('Currency converter (via express)', () => {
     const input = '-123.456';
     const expected = '-123.46';
 
-    return request(server)
+    return supertest(server)
       .get(`/format/money/${input}`)
       .expect(200, expected);
   });
@@ -50,7 +50,7 @@ describe('Currency converter (via express)', () => {
     const input = '12345678.456';
     const expected = '12 345 678.46';
 
-    return request(server)
+    return supertest(server)
       .get(`/format/money/${input}`)
       .expect(200, expected);
   });
