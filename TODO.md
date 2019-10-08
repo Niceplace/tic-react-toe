@@ -11,15 +11,15 @@ More details:
 
 # Structure / Build
 
-- Node 10
-- Scripts for
-  - Lint
-  - Unit test (+ watch, cover)
-  - Acceptance tests (+watch)
-  - ts-check
+- Node 10 (done)
+- Scripts for (done)
+  - Lint (done)
+  - Unit test (+ watch, cover) (done)
+  - Acceptance tests (+watch) (done)
+  - ts-check (done)
   - start app in dev (hot reload)
   - start app
-- Husky pre-commit / pre-push scripts
+- Husky pre-commit / pre-push scripts (done)
 - Docker image
 
 Bonus:
@@ -33,8 +33,8 @@ Bonus:
 - Round to two decimals (done)
 - Separator is '.' or nothing (Integer) (done)
 
-- Start off with basic logic for validation & formatting
-- Write unit tests for the methods needed to transform from number to string
+- Start off with basic logic for validation & formatting (done)
+- Write unit tests for the methods needed to transform from number to string (done)
 
 - Spin up a simple web server
 - GET request with URL param or POST with JSON payload ? - URL param will not be a string, does it matter ? -
@@ -45,9 +45,9 @@ Bonus:
 
 # Testing
 
-- mocha, chai, chai-as-promised
+- mocha, chai, chai-as-promised (implemented)
 - Unit tests for sure
-- Not sure what acceptance tests we could have
+- Not sure what acceptance tests we could have (fixed that, test the integration between parsed and formatter)
     - Send a request to the server, expect a result
 
 Bonus:
