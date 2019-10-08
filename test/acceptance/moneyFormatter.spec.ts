@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { parseNumber } from '../../app/parser';
-import { formatNumber } from '../../app/formatter';
+import { parseNumber } from '../../src/app/parser';
+import { formatNumber } from '../../src/app/formatter';
 
 describe('Currency converter', () => {
   it('Should format a positive integer with two decimals', () => {

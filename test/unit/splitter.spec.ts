@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { splitInChunks } from '../../app/splitter';
+import { splitInChunks } from '../../src/app/splitter';
 
 describe('String splitter', () => {
   it('Should split in chunks of equal length when string length is a multiple of chunkSize', () => {

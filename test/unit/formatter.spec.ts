@@ -10,7 +10,7 @@ describe('Number formatter', () => {
     const splitInChunksStub = {
       splitInChunks: () => ['0'],
     };
-    const mockedFormatter = proxyquire('../../app/formatter', {
+    const mockedFormatter = proxyquire('../../src/app/formatter', {
       './splitter': splitInChunksStub,
     });
 
@@ -29,7 +29,7 @@ describe('Number formatter', () => {
       splitInChunks: () => ['123'],
     };
 
-    const mockedFormatter = proxyquire('../../app/formatter', {
+    const mockedFormatter = proxyquire('../../src/app/formatter', {
       './splitter': splitInChunksStub,
     });
 
@@ -53,7 +53,7 @@ describe('Number formatter', () => {
       splitInChunks: () => ['123'],
     };
 
-    const mockedFormatter = proxyquire('../../app/formatter', {
+    const mockedFormatter = proxyquire('../../src/app/formatter', {
       './splitter': splitInChunksStub,
     });
 

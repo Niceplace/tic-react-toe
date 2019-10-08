@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { parseNumber } from '../../app/parser';
+import { parseNumber } from '../../src/app/parser';
 
 describe('Number parser', () => {
   it('Should split in chunks of equal length when string length is a multiple of chunkSize', () => {
