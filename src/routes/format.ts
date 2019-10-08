@@ -18,7 +18,7 @@ const formatRoute = (req: Request, res: Response) => {
       'Something very wrong happened, please restart the application !';
     status = 500;
   }
-  res.status(status).send(response);
+  return res.status(status).send(response);
 };
 
 export { formatRoute };

@@ -1,11 +1,9 @@
-import express from 'express';
-import { formatRoute } from './routes/format';
+import server from './app/server';
 
-const app = express();
 const port = 3000;
 
-app.get('/format/money/:input', formatRoute);
-
-app.listen(port, () =>
+const server = app.listen(port, () =>
   console.log(`Pleo money formatter listening on port ${port}!`),
 );
+
+export default server;
