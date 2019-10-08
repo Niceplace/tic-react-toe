@@ -5,7 +5,7 @@
 1. Configure prettier (done)
 1. Create dummy test projects (done)
 1. Configure husky hooks (done)
-1. Start development
+1. Start development (done)
 
 More details:
 
@@ -17,8 +17,8 @@ More details:
   - Unit test (+ watch, cover) (done)
   - Acceptance tests (+watch) (done)
   - ts-check (done)
-  - start app in dev (hot reload)
-  - start app
+  - start app in dev (hot reload) (done)
+  - start app (done)
 - Husky pre-commit / pre-push scripts (done)
 - Docker image
 
@@ -36,8 +36,8 @@ Bonus:
 - Start off with basic logic for validation & formatting (done)
 - Write unit tests for the methods needed to transform from number to string (done)
 
-- Spin up a simple web server
-- GET request with URL param or POST with JSON payload ? - URL param will not be a string, does it matter ? -
+- Spin up a simple web server (done)
+- GET request with URL param or POST with JSON payload ? - URL param will not be a string, does it matter ? - (done, used URL param)
 
 Bonus: 
 - Use parcel for simple FE app
