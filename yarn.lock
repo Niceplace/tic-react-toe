@@ -389,6 +389,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
+blns@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/blns/-/blns-2.0.4.tgz#620ca057e32f157b253dc6528d9a1be3522cb470"
+  integrity sha1-YgygV+MvFXslPcZSjZob41IstHA=
+
 body-parser@1.19.0:
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.19.0.tgz#96b2709e57c9c4e09a6fd66a8fd979844f69f08a"

@@ -2,13 +2,14 @@
 
 Code challenge for test engineering: https://github.com/pleo-io/heracles
 
+# Challenge takeaways
+
+I documented my experience & Overall discussion about the project [here](./SUMMARY.md)
+
 # Run
 
 Simple express application exposing a GET route to properly format an integer / floating point number in a financial format
 
-Available routes:
-
-- GET /format/money/:input
 
 ## Dependencies
 
@@ -20,6 +21,13 @@ Run
 > `yarn start`
 
 Application listens on port 3000 (HTTP)
+
+UI shows on :
+> http:localhost:3000/
+
+Available routes (API):
+
+> http:localhost:3000/format/money/:input
 
 # Dev
 

@@ -42,4 +42,8 @@ describe('Currency converter', () => {
 
     return expect(formatNumber(parsedInput)).to.equal(expected);
   });
+
+  it(
+    '[SKIPPED, naughtyStrings makes TS compiler crash] Should fail to format non-numeric values in naughty strings',
+  );
 });
