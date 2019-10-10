@@ -29,6 +29,13 @@ Tuesday work session  - 2019-10-08 (~2h)
 - Add front-end portion + acceptance tests
 - Tried to add naughty string, makes TS compiler crash, left parfs of the code to prove I tried to implement it
 
+Wednesday work session  - 2019-10-08 (~3h)
+- Small UI tweaks for automation tags
+- Add cypress tests & configure cypress to run with Typescript
+- Add necessary build scripts for cypress + docs
+
+Approximate total time spent: ~19h
+
 # Discussion on the process
 
 I understand that my solution is highly over engineered for what was asked but I wanted to demonstrate that I could approach testing on multiple angles and that I had a good concern for code quality in general (not only for tests).
