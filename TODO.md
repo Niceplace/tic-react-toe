@@ -40,8 +40,8 @@ Bonus:
 - GET request with URL param or POST with JSON payload ? - URL param will not be a string, does it matter ? - (done, used URL param)
 
 Bonus: 
-- Use parcel for simple FE app
-- Cypress tests ?
+- Use parcel for simple FE app (not implemented, used basic HTML template + jquery + tachyons instead)
+- Cypress tests ? (done)
 
 # Testing
 

@@ -43,8 +43,11 @@ Overall, a simple demand, not to be underestimated but very fun to implement, lo
 ? Different input types ? Multi-currency support ? )
 - More edge cases kept popping up during development & testing (what about negative number ? Formatting integers ? What about 0 ?)
 - Acceptance test came next to validate E2E flows
-- Once I new I had a solid base, it was time to add Express on top of things, more integration tests added after Integration was complete
-
+- Once I new I had a solid base, it was time to add Express on top of things, more integration tests added after express integration was complete
+- Added all acceptance tests cases using express to ensure the integration was solid with error messages
+- I tried adding the naughty strings but it broke TS typechecking, would need to investigate further to make it work. Editor really doesn't love the JSON file either
+- A simple HTML view, using tacyhons CSs framework & jquery was then added to make the UI portion
+- Once the UI was working as intended, I added two cypress UI tests, one that validates a happy path and one that validates a sad path
 
 # Next steps
 
@@ -57,4 +60,4 @@ Overall, a simple demand, not to be underestimated but very fun to implement, lo
     - Renovate for automatic updates
     - For security vulnerabilities
     - SonarQube for code coverage analysis / quality
-
+- Integrating with a CI, using the pre-packaged docker image / npm scripts to validate the code & package the app

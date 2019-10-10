@@ -34,7 +34,6 @@ Available routes (API):
 Develop (reloads on save) 
 > `yarn dev`
 
-
 ## Tests
 
 Unit
@@ -49,6 +48,15 @@ Acceptance
 Acceptance, watch mode
 
 > `yarn test:acceptance:watch`
+
+UI Acceptance
+> `yarn test:cypress`
+
+Develop on UI tests (re-runs on save)
+> `yarn cy:open`
+
+Will open cypress's runner UI. 
+Tests are in `test/cypress/integration` and are using [cypress's default folder structure](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
 
 ### Coverage
 
