@@ -1,6 +1,7 @@
 window.onload = function() {
+  var initialFormattedText = 'Money: _____.__ $';
   $('#error-section').text('');
-  $('#formatted-amount').text('Money: $ _____.__');
+  $('#formatted-amount').text(initialFormattedText);
 
   $('#submit-format').click(function() {
     var textContent = $('#number-input').val();
@@ -12,11 +13,11 @@ window.onload = function() {
 
     request.done(function(response) {
       $('#error-section').text('');
-      $('#formatted-amount').text('Money: $' + response);
+      $('#formatted-amount').text('Money: ' + response + '$');
     });
 
     request.fail(function(jqXHR, textStatus) {
-      $('#formatted-amount').text('Money: $ _____.__');
+      $('#formatted-amount').text(initialFormattedText);
       $('#error-section').text(
         'Error: ' +
           jqXHR.status +

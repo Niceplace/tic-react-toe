@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["es2017"],
+    "lib": ["ES2017"],
     "module": "commonjs",
     "allowJs": true,
     "esModuleInterop": true,
@@ -11,7 +11,10 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "baseUrl": "."
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "types": ["cypress"]
   },
+  "include": ["test/cypress/**/*.ts"],
   "exclude": ["node_modules"]
 }
