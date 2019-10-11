@@ -23,11 +23,11 @@ Run
 Application listens on port 3000 (HTTP)
 
 UI shows on :
-> http:localhost:3000/
+> http://localhost:3000/
 
 Available routes (API):
 
-> http:localhost:3000/format/money/:input
+> http://localhost:3000/format/money/:input
 
 # Dev
 
