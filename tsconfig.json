@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["ES2017"],
+    "target": "ES2018",
     "module": "commonjs",
-    "allowJs": true,
+    "allowJs": false,
     "esModuleInterop": true,
     "noEmit": true,
     "noImplicitAny": true,
@@ -13,8 +12,13 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "types": ["cypress"]
+    "paths": {
+      "app": ["app/"],
+      "test": ["test/"],
+      "frontend": ["frontend/"]
+    },
+    "typeRoots": ["app/typings", "./node_modules/@types"]
   },
-  "include": ["test/cypress/**/*.ts"],
+  "include": ["app/**/*.ts", "test/**/*.ts"],
   "exclude": ["node_modules"]
 }
