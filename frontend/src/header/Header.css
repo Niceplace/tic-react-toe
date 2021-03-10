@@ -1,0 +1,10 @@
+.App-header {
+  background: #61dafb;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* .App-header > * {
+  flex-grow: 1;
+} */
